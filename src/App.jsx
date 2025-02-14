@@ -3,7 +3,7 @@ import { useDebounce } from "react-use";
 import Search from "./components/Search";
 import Spinner from "./components/spinner";
 import Moviecard from "./components/Moviecard";
-import { updateSearchCount } from "./appwrite";
+import { updateSearchCount } from "./appwrite.js";
 
 const API_BASE_URL = "https://api.themoviedb.org/3";
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
@@ -19,6 +19,7 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [movieList, setMovieList] = useState([]);
+  const [trendingMovies, setTrendingMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState("");
 
@@ -50,7 +51,9 @@ const App = () => {
         setMovieList(data.results);
 
         // Update search count in Appwrite database
-        updateSearchCount();
+        if(query && data.results.length >0){
+          await updateSearchCount(query, data.results[0]);
+        }
       }
     } catch (error) {
       console.error(`Error fetching movies: ${error}`);
@@ -58,7 +61,12 @@ const App = () => {
     } finally {
       setIsLoading(false);
     }
-  };
+  }
+
+  // Fetch trending movies from Appwrite database
+  const loadTrendingMovies = async () => { 
+         
+   }
 
   // Fetch movies when debounced search term changes
   useEffect(() => {
