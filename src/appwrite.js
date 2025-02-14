@@ -39,7 +39,7 @@ export const updateSearchCount = async (searchTerm, movie) => {
   }
 };
 
-// for tending movies
+// for trending movies
 
 export const getTrendingMovies = async () => {
   try {
