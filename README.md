@@ -88,6 +88,6 @@ Contributions are **welcome**! If you'd like to add new features, improve the UI
 
 ---
 ## 🎥 Demo Video
-![Watch the Demo](assets/demo.mp4)
+![Watch the Demo](assets/chitrakatha-demo.mp4)
 
  
