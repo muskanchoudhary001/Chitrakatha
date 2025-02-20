@@ -67,7 +67,7 @@ A **dynamic Recommendations Section** has been **added** that updates **every 2 
 ## 🆕 Recommendations Section (Screenshot)
 Here’s how the new **Recommendations Section** looks:
 
-![Recommendations Section](src/assets/recommendations-section.png)
+![Recommendations Section](src/assets/recommendations.png)
 
 
 ### **2️⃣ Genre-Based Movie Filtering (Upcoming 🚧)**  
