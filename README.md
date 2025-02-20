@@ -87,5 +87,7 @@ Contributions are **welcome**! If you'd like to add new features, improve the UI
 4. **Submit a Pull Request** and let's improve Chitrakatha together! 🚀  
 
 ---
+## 🎥 Demo Video
+![Watch the Demo](assets/demo.mp4)
 
  
