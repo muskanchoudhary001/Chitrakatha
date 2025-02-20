@@ -6,6 +6,7 @@ Chitrakatha is a **single-page movie suggestion and trending movie recommendatio
 - Fetches and displays **trending movies** from TMDB API.  
 - Suggests movies based on **user preferences**.  
 - Backend integration using **Appwrite**.  
+- **Recommendations Section** (Newly Added) that updates dynamically.  
 - **Interactive genre-based filtering** for movies.  
 - **Movie details page** for an in-depth look at any selected movie.  
 - **Deployed on Vercel** for seamless access.  
@@ -47,17 +48,28 @@ Chitrakatha is a **single-page movie suggestion and trending movie recommendatio
 3. Add the **Environment Variables** in Vercel settings.  
 4. Deploy the project.  
 
-## 🔮 **Future Additions**  
-### **1️⃣ Personalized Movie Recommendations**  
-- A **Recommendations Section** will be added that suggests movies based on **user preferences** and **previous search history**.  
-- Users will receive **dynamic recommendations** based on their interactions with the app.  
+## 🔥 **New Features & Updates**  
+### **1️⃣ Personalized Movie Recommendations (Newly Added 🎉)**  
+A **dynamic Recommendations Section** has been **added** that updates **every 5 minutes** to provide fresh movie suggestions.  
 
-### **2️⃣ Genre-Based Movie Filtering**  
+#### 🔍 **How It Works**  
+1️⃣ Initial fetch happens when `movieId` changes.  
+2️⃣ `setInterval` runs `fetchRecommendedMovies()` **every 5 minutes**.  
+3️⃣ Randomizes movies before slicing (so new movies appear).  
+4️⃣ `clearInterval(interval)` cleans up on unmount (prevents memory leaks).  
+
+#### 🚀 **Features**  
+✅ **Auto-refresh** every **5 minutes**.  
+✅ Always shows **5 random recommended movies**.  
+✅ No **duplicate movies** on refresh.  
+✅ Prevents **API spam** by fetching only every **5 minutes**.  
+
+### **2️⃣ Genre-Based Movie Filtering (Upcoming 🚧)**  
 - A **"Genre" button** will be added, allowing users to filter movies by genre.  
 - Clicking the button will display a **dropdown menu with different genres**.  
 - Once a user selects a genre, all movies of that category will be **filtered and displayed** on the page.  
 
-### **3️⃣ Movie Details Page**  
+### **3️⃣ Movie Details Page (Upcoming 🚧)**  
 - Clicking on a **specific movie** will navigate the user to a **dedicated movie details page**.  
 - This page will display:
   - **Movie Synopsis**  
@@ -87,7 +99,5 @@ Contributions are **welcome**! If you'd like to add new features, improve the UI
 4. **Submit a Pull Request** and let's improve Chitrakatha together! 🚀  
 
 ---
-## 🎥 Demo Video
-![Watch the Demo](src/assets/chitrakatha-demo.mp4)
-
- 
+## 🎥 Demo Video  
+![Watch the Demo](src/assets/chitrakatha-demo.mp4)  
