@@ -64,6 +64,12 @@ A **dynamic Recommendations Section** has been **added** that updates **every 2 
 ✅ No **duplicate movies** on refresh.  
 ✅ Prevents **API spam** by fetching only every **2 minutes**.  
 
+## 🆕 Recommendations Section (Screenshot)
+Here’s how the new **Recommendations Section** looks:
+
+![Recommendations Section](src/assets/recommendations-section.png)
+
+
 ### **2️⃣ Genre-Based Movie Filtering (Upcoming 🚧)**  
 - A **"Genre" button** will be added, allowing users to filter movies by genre.  
 - Clicking the button will display a **dropdown menu with different genres**.  
