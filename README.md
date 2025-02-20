@@ -50,19 +50,19 @@ Chitrakatha is a **single-page movie suggestion and trending movie recommendatio
 
 ## 🔥 **New Features & Updates**  
 ### **1️⃣ Personalized Movie Recommendations (Newly Added 🎉)**  
-A **dynamic Recommendations Section** has been **added** that updates **every 5 minutes** to provide fresh movie suggestions.  
+A **dynamic Recommendations Section** has been **added** that updates **every 2 minutes** to provide fresh movie suggestions.  
 
 #### 🔍 **How It Works**  
 1️⃣ Initial fetch happens when `movieId` changes.  
-2️⃣ `setInterval` runs `fetchRecommendedMovies()` **every 5 minutes**.  
+2️⃣ `setInterval` runs `fetchRecommendedMovies()` **every 2 minutes**.  
 3️⃣ Randomizes movies before slicing (so new movies appear).  
 4️⃣ `clearInterval(interval)` cleans up on unmount (prevents memory leaks).  
 
 #### 🚀 **Features**  
-✅ **Auto-refresh** every **5 minutes**.  
+✅ **Auto-refresh** every **2 minutes**.  
 ✅ Always shows **5 random recommended movies**.  
 ✅ No **duplicate movies** on refresh.  
-✅ Prevents **API spam** by fetching only every **5 minutes**.  
+✅ Prevents **API spam** by fetching only every **2 minutes**.  
 
 ### **2️⃣ Genre-Based Movie Filtering (Upcoming 🚧)**  
 - A **"Genre" button** will be added, allowing users to filter movies by genre.  
